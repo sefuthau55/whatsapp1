@@ -1,0 +1,16 @@
+import pywhatkit as kit
+import datetime
+
+def send_whatsapp_message(phone_number, message):
+    now = datetime.datetime.now(1)
+    # Setează ora la care se va trimite mesajul
+    hour = now.hour
+    minute = now.minute + 2  # Trimite mesajul după 2 minute
+
+    kit.sendwhatmsg(phone_number, message, hour, minute)
+
+if __name__ == "__main__":
+    phone_number = "+393533870586"  # Numărul de telefon în format internațional
+    message = "injura te caine"
+
+    send_whatsapp_message(+393533870586, message)
